@@ -1,0 +1,14 @@
+{
+  "description": "Gato com asa de passarinho sem medo de aranhas", 
+  "external_url": "https://en.wikipedia.org/wiki/Winged_cat", 
+  "image": "https://img.freepik.com/premium-photo/angel-cat-with-wings-high-quality-illustration_763713-718.jpg?w=826", 
+  "name": "Senhor Gato da Silva",
+  "attributes": [{
+      "trait_type": "Asas", 
+      "value": "Sim"
+    }, 
+    {
+      "trait_type": "Gato", 
+      "value": "sim"
+    }]
+}
