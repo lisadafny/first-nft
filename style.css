@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300&display=swap');
 html {
     height: 100%;
 }
@@ -10,6 +11,7 @@ body {
     background-attachment: fixed;
     background: linear-gradient(0deg, rgba(25,22,33,1) 0%, rgba(2,1,17,1) 100%);
     color: #fff;
+    font-family: 'Ysabeau SC', sans-serif;
 }
 #divImg{
     display: none;
