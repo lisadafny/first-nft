@@ -1,11 +1,16 @@
 async function init() {
     if (window.ethereum == null) {
         // If MetaMask is not installed, we use the default provider,
-        // which is backed by a variety of third-party services (such
-        // as INFURA). They do not have private keys installed so are
-        // only have read-only access
-        console.log("MetaMask not installed; using read-only defaults");
-        provider = ethers.getDefaultProvider();
+          // which is backed by a variety of third-party services (such
+          // as INFURA). They do not have private keys installed so are
+          // only have read-only access
+          console.log("MetaMask not installed; using read-only defaults");
+          //provider = ethers.getDefaultProvider();
+          provider = new ethers.InfuraProvider("maticmum");
+          network = await provider.getNetwork();
+          contract = new ethers.Contract("0xBca236FD0aB582a5FF232c533D8ab04dD580511c", abi, provider);
+          console.log("selected provider: ", provider);
+          console.log("network:", network);
     } else {
         // Connect to the MetaMask EIP-1193 object. This is a standard
         // protocol that allows Ethers access to make all read-only
