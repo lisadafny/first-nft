@@ -25,9 +25,6 @@ main{
     text-orientation: sideways;
     writing-mode: vertical-rl;
 }
-#btnSubmit{
-    padding-top: 1rem;
-}
 #formMint{
     background-color: #ffffff80;
     border-radius: 5px;
