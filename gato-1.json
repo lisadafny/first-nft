@@ -1,0 +1,14 @@
+{
+  "description": "Gato sem asa de passarinho e com medo de aranhas", 
+  "external_url": "https://en.wikipedia.org/wiki/Cat", 
+  "image": "https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1229&q=80", 
+  "name": "Senhor Gato da Silva",
+  "attributes": [{
+      "trait_type": "Asas", 
+      "value": "Não"
+    }, 
+    {
+      "trait_type": "Gato", 
+      "value": "sim"
+    }]
+}

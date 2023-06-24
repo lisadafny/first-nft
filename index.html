@@ -20,14 +20,27 @@
     </header>
     <main>
         <h2 id="nftNome"></h2>
-        <div id="divImg">
+        <section id="divImg">
             <img src="" id="imgNFT" title="image NFT">
             <p id="nftDesc"></p>
-        </div>
+        </section>
+        <section>
+            <h2>New NFT</h2>
+            <form action="" name="formMint" id="formMint" method="get">
+                <label for="formTo">Endereço da destinatário:
+                    <input type="text" placeholder="<0x...>" required name="formTo" id="formTo" />
+                </label>
+                <label for="formMetadados">URL Metadados:
+                    <input type="text" placeholder="json" required name="formMetadados" id="formMetadados" />
+                </label>
+                <input id="btnSubmit" type="button" value="Mintar (gerar) NFT" onclick="mintar()" />
+            </form>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.6.1/ethers.umd.min.js"></script>
     <script src="nftgato.abi.js"></script>
     <script type="module" src="util.js"></script>
 </body>

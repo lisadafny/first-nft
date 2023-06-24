@@ -1,4 +1,3 @@
-import { ethers } from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.6.1/ethers.min.js";
 async function init() {
     if (window.ethereum == null) {
         // If MetaMask is not installed, we use the default provider,
@@ -44,6 +43,20 @@ async function init() {
         imgNFT.src = metadados.image;
         const divImg = document.getElementById("divImg");
         divImg.style.display = "block";
+    }
+}
+async function mintar() {
+    event.preventDefault();
+    const form = document.getElementById("formMint");
+    alert("Aguarde e confirme a transação no Metamask");
+    const tx = await contract.safeMint(form.formTo.value, form.formMetadados.value);
+    console.log("tx enviada: ", tx);
+    alert("Transação enviada a Blockchain. Aguarde.\nTx ID:" + tx.hash);
+    const txReceipt = await tx.wait();
+    console.log("txReceipt: ", txReceipt);
+    if (txReceipt.status === 1) {
+        alert("Parabéns! Novo NFT gerado");
+        form.reset();
     }
 }
 let signer = null;
