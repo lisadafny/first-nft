@@ -17,3 +17,11 @@ body {
 #imgNFT{
     width: 20rem;
 }
+main{
+    display: flex;
+    justify-content: center;
+}
+#nftNome{
+    text-orientation: sideways;
+    writing-mode: vertical-rl;
+}
