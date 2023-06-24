@@ -45,20 +45,22 @@ async function init() {
         divImg.style.display = "block";
     }
 }
-async function mintar() {
-    event.preventDefault();
-    const form = document.getElementById("formMint");
-    alert("Aguarde e confirme a transação no Metamask");
-    const tx = await contract.safeMint(form.formTo.value, form.formMetadados.value);
-    console.log("tx enviada: ", tx);
-    alert("Transação enviada a Blockchain. Aguarde.\nTx ID:" + tx.hash);
-    const txReceipt = await tx.wait();
-    console.log("txReceipt: ", txReceipt);
-    if (txReceipt.status === 1) {
-        alert("Parabéns! Novo NFT gerado");
-        form.reset();
+document.getElementById('btnSubmit').addEventListener('click', () => {
+    async function mintar() {
+        event.preventDefault();
+        const form = document.getElementById("formMint");
+        alert("Aguarde e confirme a transação no Metamask");
+        const tx = await contract.safeMint(form.formTo.value, form.formMetadados.value);
+        console.log("tx enviada: ", tx);
+        alert("Transação enviada a Blockchain. Aguarde.\nTx ID:" + tx.hash);
+        const txReceipt = await tx.wait();
+        console.log("txReceipt: ", txReceipt);
+        if (txReceipt.status === 1) {
+            alert("Parabéns! Novo NFT gerado");
+            form.reset();
+        }
     }
-}
+})
 let signer = null;
 let provider;
 let network;
