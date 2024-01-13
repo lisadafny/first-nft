@@ -36,7 +36,7 @@ async function init() {
         const nftNomeObj = await contract.name();
         const nftNome = document.getElementById("nftNome");
         nftNome.innerHTML = nftNomeObj;
-        const metadadosURL = await contract.tokenURI(0);
+        const metadadosURL = await contract.tokenURI(2);
         console.log("metadadosURL: ", metadadosURL);
         const metadadadosResp = await fetch(metadadosURL);
         console.log("metadadadosResp: ", metadadadosResp);
